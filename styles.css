@@ -1,9 +1,10 @@
 body{
-    padding: 8%;
+    padding: 4% 8%;
     font-family: "DM Sans", sans-serif;
     font-weight: 200;
     background-color: #F8F8F8;
     color: #1D1D1D;
+    overflow-x: hidden;
 }
 
 h1{
@@ -106,4 +107,47 @@ nav ul li, nav ol li{
 #bottombar{
     display: flex;
     justify-content: space-between;
+}
+
+
+
+#circle1{
+    position: absolute;
+    z-index: -1;
+    transform: scale(1.05);
+    top: -400px;
+    left: 90px;
+    width: 517px;
+    height: 517px;
+    background-image: url(images/circle1.png);
+
+    animation: spin 50s infinite linear;
+}
+
+@keyframes spin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+#circle2{
+    position: absolute;
+    z-index: -1;
+    top: 400px;
+    left: -380px;
+    width: 471px;
+    height: 471px;
+    background-image: url(images/circle2.png);
+
+    animation: spin 50s infinite linear;
+}
+
+#circle3{
+    position: absolute;
+    z-index: -1;
+    bottom: -500px;
+    left: 0;
+
+    width: 696px;
+    height: 696px;
+    background-image: url(images/circle3.png);
 }
