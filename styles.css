@@ -5,6 +5,7 @@ body{
     background-color: #F8F8F8;
     color: #1D1D1D;
     overflow-x: hidden;
+    transition: all 2s;
 }
 
 h1{
@@ -27,6 +28,10 @@ a{
     text-decoration: none;
     transition: ease .8s;
     /* padding: 6px 8px 6px 0; */
+}
+
+a.switch{
+    color: white;
 }
 
 a:hover{
@@ -64,6 +69,7 @@ li a:hover{
     gap: 15px 25px;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.3em;
 }
 
 
@@ -110,13 +116,22 @@ nav ul li, nav ol li{
 }
 
 
+.hidden{
+    display: none;
+    background-color: pink;
+}
+
+/* svg{
+    background-color: red;
+} */
+
 
 #circle1{
     position: absolute;
     z-index: -1;
     transform: scale(1.05);
     top: -400px;
-    left: 90px;
+    right: -90px;
     width: 517px;
     height: 517px;
     background-image: url(images/circle1.png);
@@ -132,7 +147,7 @@ nav ul li, nav ol li{
 #circle2{
     position: absolute;
     z-index: -1;
-    top: 400px;
+    bottom: 200px;
     left: -380px;
     width: 471px;
     height: 471px;
@@ -144,10 +159,85 @@ nav ul li, nav ol li{
 #circle3{
     position: absolute;
     z-index: -1;
-    bottom: -500px;
-    left: 0;
+    bottom: -240px;
+    right: -550px;
+
 
     width: 696px;
     height: 696px;
     background-image: url(images/circle3.png);
+
+    animation: spin 50s infinite linear;
+}
+
+button{
+    color: white;
+    background-color: black;
+    padding: 0 20px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+
+
+@media only screen and (min-width: 900px){
+
+    body{
+        padding: 2% 8%;
+    }
+
+    main{
+        flex-direction: row;
+        width: 100%;
+        padding: 4vw 0;
+    }
+
+    h1{
+        font-size: 6em;
+    }
+
+
+    #circle1{
+
+
+        top: -380px;
+        right: -100px;
+
+        width: 517px;
+        height: 517px;
+    }
+    
+    #circle2{
+
+
+        bottom: -300px;
+        left: -100px;
+
+        width: 471px;
+        height: 471px;
+
+    
+
+    }
+    
+    #circle3{
+
+
+        bottom: -400px;
+        right: -100px;
+    
+    
+        width: 696px;
+        height: 696px;
+    
+
+    }
+
+    /* switch */
+    body.switch {
+        background-color: rgb(41, 41, 41);
+        color: white;
+        transition: all 2s;
+    }
 }
