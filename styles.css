@@ -147,7 +147,7 @@ nav ul li, nav ol li{
 #circle2{
     position: absolute;
     z-index: -1;
-    bottom: 200px;
+    bottom: 50px;
     left: -380px;
     width: 471px;
     height: 471px;
@@ -159,7 +159,7 @@ nav ul li, nav ol li{
 #circle3{
     position: absolute;
     z-index: -1;
-    bottom: -240px;
+    bottom: -300px;
     right: -550px;
 
 
@@ -190,7 +190,7 @@ button{
 @media only screen and (min-width: 900px){
 
     body{
-        padding: 2% 8%;
+        padding: 1% 4%;
     }
 
     main{
@@ -205,7 +205,7 @@ button{
 
 
     #circle1{
-
+        position: fixed;
 
         top: -380px;
         right: -100px;
@@ -215,10 +215,10 @@ button{
     }
     
     #circle2{
+        position: fixed;
 
-
-        bottom: -300px;
-        left: -100px;
+        bottom: -330px;
+        left: -210px;
 
         width: 471px;
         height: 471px;
@@ -228,10 +228,10 @@ button{
     }
     
     #circle3{
+        position: fixed;
 
-
-        bottom: -400px;
-        right: -100px;
+        bottom: -430px;
+        right: -250px;
     
     
         width: 696px;
