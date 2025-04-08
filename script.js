@@ -1,5 +1,6 @@
 (function() {
     'use strict';
+    console.log('reading js');
 
     const button = document.querySelector('button');
     const body = document.querySelector('body');
@@ -9,13 +10,30 @@
 
     let mode = 'light';
 
+    // for (let i=0; i<links.length; i++){
+    //     links[i].addEventListener('mouseover', function(){
+    //         links[i].innerHTML += 'add svg';
+    //     })
+
+    //     links[i].addEventListener('mouseout', function(){
+    //         links[i].innerHTML - 'add svg';
+    //     })
+
+    // }
+
+
+
     button.addEventListener('click', function() {
         if (mode === 'light') {
             body.className = 'switch';
 
             for (let i=0; i<links.length; i++){
                 links[i].className = 'switch';
+
+
             }
+
+
 
             for (let i=0; i<blksparkle.length; i++){
                 blksparkle[i].classList.add('hidden');
@@ -25,6 +43,8 @@
             for (let i=0; i<blksparkle.length; i++){
                 whtsparkle[i].classList.remove('hidden');
             }
+
+
             
 
             mode = 'dark';

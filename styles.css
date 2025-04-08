@@ -179,6 +179,12 @@ button{
     border-radius: 3px;
 }
 
+    /* switch */
+    body.switch {
+        background-color: rgb(41, 41, 41);
+        color: white;
+        transition: all 2s;
+    }
 
 
 @media only screen and (min-width: 900px){
@@ -234,10 +240,5 @@ button{
 
     }
 
-    /* switch */
-    body.switch {
-        background-color: rgb(41, 41, 41);
-        color: white;
-        transition: all 2s;
-    }
+
 }
