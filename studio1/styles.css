@@ -6,12 +6,15 @@ body{
     font-family: "Alumni Sans", sans-serif;
     letter-spacing: .2em;
     font-size: 1.3em;
+}
 
+#line1{
+    transition: alle ease;
 }
 
 #myVideo{
-    width: 100vw;
-    height: auto;
+    width: 100%;
+    height: 100%;
     filter: contrast(120%);
 }
 
@@ -42,7 +45,7 @@ label{
 .jiggle{
     z-index: 1;
     font-size: 4em;
-    background-color: red;
+    /* background-color: red; */
     color: white;
     position: absolute;
     animation: jiggle 8s ease infinite alternate-reverse;
@@ -65,4 +68,12 @@ label{
       transform: translate(-6px, 8px);
       filter: blur(2px);
     }
+}
+
+.showing{
+    opacity: 1;
+}
+
+.hidden{
+    opacity: 0;
 }
