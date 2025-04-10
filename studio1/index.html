@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- normalize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> 
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@100&display=swap" rel="stylesheet">
+
+
+    <!-- font awesone icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <section id="mysection">
+        <p class="jiggle">Lorem Ipsum</p>
+    </section>
+
+
+
+
+    <video id="myVideo" poster="media/thumbnail.png" loop muted autoplay loop playsinline>
+        <source src="media/duck.webm" type="video/webm">
+        <source src="media/duck.mp4" type="video/mp4">
+
+        <p>Your browser doesn't support HTML5 video.
+            Here is a <a href="media/squirrel.mp4">link to the video</a> instead
+        </p>
+    </video>
+
+
+    <section id="controls">
+        <form>
+            <label>hue range</label>
+            <input 
+            type="range"
+            id="hue"
+            name="hue"
+            min="0"
+            max="360"
+            value="0"
+            >
+        </form>
+
+        <i class="fas fa-expand"></i>
+    </section>
+ 
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow-x: hidden;
+    font-family: "Alumni Sans", sans-serif;
+    letter-spacing: .2em;
+    font-size: 1.3em;
+
+}
+
+#myVideo{
+    width: 100vw;
+    height: auto;
+    filter: contrast(120%);
+}
+
+.fa-expand{
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+#controls{
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+input{
+    width: 200px;
+}
+
+label{
+    color: white;
+}
+
+.jiggle{
+    z-index: 1;
+    font-size: 4em;
+    background-color: red;
+    color: white;
+    position: absolute;
+    animation: jiggle 8s ease infinite alternate-reverse;
+}
+
+@keyframes jiggle {
+    0% {
+      transform: translate(0);
+      filter: blur(1px);
+    }
+    50% {
+      transform: translate(-10px, -12px);
+      filter: blur(2px);
+    }
+    75% {
+      transform: translate(10px, 4px);
+      filter: blur(1px);
+    }
+    100% {
+      transform: translate(-6px, 8px);
+      filter: blur(2px);
+    }
+}
