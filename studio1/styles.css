@@ -69,19 +69,19 @@ label{
 @keyframes jiggle {
     0% {
       transform: translate(0);
-      filter: blur(1px);
+      filter: blur(0px);
     }
     50% {
       transform: translate(-10px, -12px);
-      filter: blur(2px);
+      filter: blur(1px);
     }
     75% {
       transform: translate(10px, 4px);
-      filter: blur(1px);
+      filter: blur(0px);
     }
     100% {
       transform: translate(-6px, 8px);
-      filter: blur(2px);
+      filter: blur(1px);
     }
 }
 
