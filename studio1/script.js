@@ -1,8 +1,9 @@
 (function(){
     'use strict';
 
-    const mySection = document.querySelector('#mysection');
-    const myLine = document.querySelector('#line1');
+    const line1 = document.querySelector('#line1');
+    const line2 = document.querySelector('#line2');
+    const line3 = document.querySelector('#line3');
 
     const intervalID = setInterval(checkTime, 1000);
 
@@ -19,16 +20,21 @@
     })
 
     function checkTime(){
-        if (1 < myVideo.currentTime && myVideo.currentTime < 5){
-            myLine.className = 'showing';
+        if (1 < video.currentTime && video.currentTime < 3){
+            line1.className = 'showing';
         }else{
-            myLine.className = 'hidden';
+            line1.className = 'hidden';
         }
-        // if (5 < myVideo.currentTime && myVideo.currentTime < 7){
-        //     myLine.className = 'showing';
-        // }else{
-        //     myLine.className = 'hidden';
-        // }
+        if (2 < video.currentTime && video.currentTime < 4){
+            line2.className = 'showing';
+        }else{
+            line2.className = 'hidden';
+        }
+        if (3 < video.currentTime && video.currentTime < 6){
+            line3.className = 'showing';
+        }else{
+            line3.className = 'hidden';
+        }
     }
 
     function hueRange(){
