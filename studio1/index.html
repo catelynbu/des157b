@@ -18,23 +18,11 @@
 
     <link href="styles.css" rel="stylesheet">
 
+    <script src="script.js" defer></script>
+
     <title>Blockbuster Video</title>
 </head>
 <body>
-    <section id="line1">
-        <p class="jiggle">Did you</p>
-    </section>
-
-    <section id="line2">
-        <p class="jiggle">get your</p>
-    </section>
-
-    <section id="line3">
-        <p class="jiggle">wish?</p>
-    </section>
-
-
-
 
     <video id="myVideo"  loop muted autoplay playsinline>
         <source src="media/duck.webm" type="video/webm">
@@ -45,6 +33,17 @@
         </p>
     </video>
 
+    <section id="line1" class="hidden">
+        <p class="jiggle">Did you</p>
+    </section>
+
+    <section id="line2" class="hidden" >
+        <p class="jiggle">get your</p>
+    </section>
+
+    <section id="line3" class="hidden">
+        <p class="jiggle">wish?</p>
+    </section>
 
     <section id="controls">
         <form>
@@ -61,8 +60,13 @@
 
         <i class="fas fa-expand"></i>
     </section>
+
+    <section id="loadingscreen">
+        <i class="fas fa-spinner"></i>
+    </section>
+
  
 
-    <script src="script.js" defer></script>
+
 </body>
 </html>

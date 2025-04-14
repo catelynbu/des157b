@@ -11,6 +11,16 @@
 
     const fs = document.querySelector('.fa-expand');
 
+    const loadingIcon = document.querySelector('.fa-spinner');
+    const loadingScreen = document.querySelector('#loadingscreen');
+
+    video.addEventListener('playing', function(){
+        loadingIcon.style.display = 'none';
+        loadingScreen.style.display = 'none';
+    });
+
+
+
     fs.addEventListener('click', function(){
         if (!document.fullscreenElement){
             document.documentElement.requestFullscreen();
@@ -21,7 +31,7 @@
 
     function checkTime(){
         if (1 < video.currentTime && video.currentTime < 3){
-            line1.className = 'showing';
+            line1.classList = 'showing';
         }else{
             line1.className = 'hidden';
         }
