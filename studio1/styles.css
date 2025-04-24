@@ -9,7 +9,8 @@ body{
 }
 
 #line1{
-    transition: alle ease;
+    transition: all 3s ease;
+    z-index: 1;
 }
 
 #myVideo{
