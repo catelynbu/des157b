@@ -1,0 +1,106 @@
+body{
+    padding: 4% 8%;
+    font-family: "Gaegu", sans-serif;
+    font-weight: 200;
+    background-color: #F8F8F8;
+    color: #1D1D1D;
+    transition: all 2s;
+}
+
+header{
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    padding: 0 0 100px 0;
+}
+
+h1{
+    font-size: 2.4em;
+    text-align: center;
+}
+
+p{
+    font-size: 1.5em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.day{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+
+
+#bottombar{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+footer p{
+    font-size: 1.1em;
+}
+
+#links{
+    display: flex;
+    gap: 24px;
+}
+
+#point{
+    position: absolute;
+    right: -50px;
+    top: 100px;
+
+
+    background-image: url(images/point.png);
+    width: 130px;
+    height: 60px;
+    background-repeat: no-repeat;
+}
+
+@keyframes slowBounce{
+    0%, 100% {
+      transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(3deg);
+    }
+}
+  
+.bounce{
+    animation: slowBounce 2s ease-in-out infinite;
+}
+
+@keyframes jiggleLoop{
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(-5deg); }
+    10% { transform: rotate(5deg); }
+    15% { transform: rotate(-5deg); }
+    20% { transform: rotate(5deg); }
+    25% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+  
+.jiggle{
+    animation: jiggleLoop 4s infinite;
+}
+
+
+@media only screen and (min-width: 900px){
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 100px;
+        padding: 150px 0 200px;
+    }
+
+    #point{
+        right: -90px;
+        top: 60px;
+    }
+}
