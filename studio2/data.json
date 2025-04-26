@@ -1,37 +1,37 @@
-[
-    {
+{
+    "sunday" : {
         "day": "Sunday",
         "received": 28,
         "deleted": 22
     },
-    {
+    "monday" : {
         "day": "Monday",
         "received": 14,
         "deleted": 7
     },
-    {
+    "tuesday" : {
         "day": "Tuesday",
         "received": 18,
         "deleted": 16
     },
-    {
+    "wednesday" : {
         "day": "Wednesday",
         "received": 10,
         "deleted": 9
     },
-    {
+    "thursday" : {
         "day": "Thursday",
         "received": 17,
         "deleted": 15
     },
-    {
+    "friday" : {
         "day": "Friday",
         "received": 29,
         "deleted": 24
     },
-    {
+    "saturday" : {
         "day": "Saturday",
         "received": 29,
         "deleted": 26
     }
-]
+}
