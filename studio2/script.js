@@ -31,11 +31,25 @@ function outputHTML (dayData){
 
     const days = document.querySelectorAll('.day');
 
+    const numbers = document.querySelectorAll('.numbers');
+    const notif = document.querySelectorAll('.dot')
+
 
     for (let i=0; i<emails.length; i++){
         emails[i].addEventListener('mouseover', function(){
-            console.log('hover');
-            days[i].style.backgroundColor = 'red';
+            console.log('on');
+            numbers[i].classList.remove('hidden');
+            numbers[i].classList.add('show');
+            
+            emails[i].classList.remove('jiggle');
+
+            notif[i].style.opacity = '0';
+        })
+
+        emails[i].addEventListener('mouseout', function(){
+            console.log('out');
+            numbers[i].classList.remove('show');
+            numbers[i].classList.add('hidden');
         })
     }
 
