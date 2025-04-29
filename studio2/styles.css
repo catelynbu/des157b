@@ -11,8 +11,7 @@ header{
     position: relative;
     width: fit-content;
     margin: auto;
-    padding: 0 0 100px 0;
-}
+    padding: 0 0 72px 0;}
 
 h1{
     font-size: 2.4em;
@@ -96,7 +95,7 @@ footer p{
     border: #dddddd75 solid 1px;
     border-radius: 20px;
     background-color: white;
-    padding: 10px 20px;
+    padding: 4px 20px;
     transition: all 0.5s ease;
 }
 
@@ -114,9 +113,6 @@ hr{
     border: #dddddd75 solid 0.5px;
 }
 
-.email{
-    /* background-color: rebeccapurple; */
-}
 
 .position{
     position: relative;
@@ -173,8 +169,26 @@ a:hover{
     main{
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 24px;
+        padding: 0 0 100px 0;
+    }
+
+    #point{
+        right: -90px;
+        top: 60px;
+    }
+
+    body{
+        padding: 2% 8%;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    main{
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 72px;
-        padding: 0 0 200px 0;
+        padding: 0 0 100px 0;
     }
 
     #point{
