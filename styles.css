@@ -179,6 +179,10 @@ button{
     border-radius: 3px;
 }
 
+
+button:hover{
+    cursor: pointer;
+}
     /* switch */
     body.switch {
         background-color: rgb(41, 41, 41);

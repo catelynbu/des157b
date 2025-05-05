@@ -1,0 +1,94 @@
+body{
+    padding: 10px 16%;
+    font-family: "Gaegu", sans-serif;
+    font-weight: 200;
+    background-color: #F8F8F8;
+    color: #1D1D1D;
+    transition: all 2s;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin: 0;
+}
+
+aside{
+    border-radius: 20px;
+    background-color: lavender;
+    max-width: 160px;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+nav{
+
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.sticker{
+    width: 60px;
+    height: auto;
+}
+
+.filter{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+
+main{
+    display: flex;
+    justify-content: space-between;
+}
+
+canvas{
+    width: 600px;
+    height: 400px;
+    background-color: cornflowerblue;
+}
+
+#gallery nav{
+    display: flex;
+    background-color: cadetblue;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.not-selected{
+    width: 130px;
+    height: 90px;
+}
+
+
+#gohere{
+    z-index: 50;
+    background-color: rebeccapurple;
+    width: 600px;
+}

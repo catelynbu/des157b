@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- normalize css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> 
+
+    <!-- CSS File -->
+    <link href="styles.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+
+    <title>photobooth time! | library liberty</title>
+</head>
+
+
+<body>
+    <header>
+        <h1>Photobooth Time!</h1>
+    </header>
+
+    <main>
+        <aside>
+            <div class="side">
+                <h2>stickers</h2>
+                <nav>
+                    <ul>
+                        <li><img class="sticker" src="images/heart.png" alt=""></li>
+                        <li><img class="sticker" src="images/heart.png" alt=""></li>
+                        <li><img class="sticker" src="images/heart.png" alt=""></li>
+                        <li><img class="sticker" src="images/heart.png" alt=""></li>
+                        <li><img class="sticker" src="images/heart.png" alt=""></li>
+                        <li><img class="sticker" src="images/heart.png" alt=""></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="side">
+                <h2>filters</h2>
+                <nav>
+                    <ul>
+                        <li class="filter" id="filter1"></li>
+                        <li class="filter" id="filter2"></li>
+                        <li class="filter" id="filter3"></li>
+                        <li class="filter" id="filter4"></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+
+        <div >
+            <canvas id="canvas">
+                <div id="gohere">
+        
+                </div>
+        
+                <!-- <p>here</p> -->
+            </canvas>
+
+            <div id="gallery">
+                <nav>
+                    <ul>
+                        <li><img class="not-selected" src="" alt=""></li>
+                        <li><img class="not-selected" src="" alt=""></li>
+                        <li><img class="not-selected" src="" alt=""></li>
+                        <li><img class="not-selected" src="" alt=""></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+       
+
+    </main>
+
+    <!-- <div id="canvas">
+
+    </div> -->
+
+
+
+
+    <button>add stuffs</button>
+
+    <button id="dwnl">download image</button>
+</body>
+
+
+</html>
