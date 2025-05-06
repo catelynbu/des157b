@@ -56,9 +56,9 @@ li{
 }
 
 .filter{
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    width: fit-content;
+    min-height: 50px;
+    background-color: white;
     border-radius: 10px;
 }
 
@@ -66,12 +66,22 @@ li{
 main{
     display: flex;
     justify-content: space-between;
+    /* background-color: aliceblue; */
+    height: 600px;
+    /* background-image: url(images/cat1.jpg);
+    background-repeat: no-repeat;
+    background-position: center; */
 }
 
-canvas{
+.heart{
+    width: 60px;
+    height: 45px;
+}
+
+#board{
     width: 600px;
     height: 400px;
-    background-color: cornflowerblue;
+
 }
 
 #gallery nav{
@@ -88,8 +98,7 @@ canvas{
 }
 
 
-#gohere{
-    z-index: 50;
-    background-color: rebeccapurple;
-    width: 600px;
+
+.item{
+    touch-action: none;
 }

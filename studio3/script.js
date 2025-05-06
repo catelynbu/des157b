@@ -2,39 +2,99 @@
     "use strict";
     console.log('reading js');
 
-    const btn = document.querySelector('button');
 
-    const canvas = document.querySelector('canvas');
+    
+    // target elements with the "draggable" class
+    interact('.draggable')
+    .draggable({
+        // enable inertial throwing
+        inertia: true,
+        // keep the element within the area of it's parent
+        modifiers: [
+        interact.modifiers.restrictRect({
+            restriction: 'parent',
+            endOnly: true
+        })
+        ],
+        // enable autoScroll
+        autoScroll: true,
 
-    const dwnl = document.querySelector('#dwnl');
+        listeners: {
+        // call this function on every dragmove event
+        move: dragMoveListener,
 
-    const here = document.querySelector('#gohere');
-
-
-    btn.addEventListener('click', function(){
-        console.log('click');
-
-        here.innerHTML += '<p>add this to the canvas<p>'
+        }
     })
 
-    dwnl.addEventListener('click', function(){
-        
-        // const pic = document.getElementById("canvas");
-        // let dataURL = pic.toDataURL("image/png, 0.5");
-        // console.log(dataURL);
+    function dragMoveListener (event) {
+    var target = event.target
+    // keep the dragged position in the data-x/data-y attributes
+    var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+    var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+    // translate the element
+    target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+    // update the posiion attributes
+    target.setAttribute('data-x', x)
+    target.setAttribute('data-y', y)
+    }
 
 
-        let canvasUrl = canvas.toDataURL("image/jpeg", 0.5);
-        console.log(canvasUrl);
-        const createEl = document.createElement('a');
-        createEl.href = canvasUrl;
-        createEl.download = "download-this-canvas";
-        createEl.click();
-        createEl.remove();
 
-        // const data =  canvas.toDataURL();
-        // console.log(data);
-    })
 
+    const myImg = document.querySelector('#cat1')
+
+      
+
+    const filterBoxes = document.querySelectorAll('.filter');
+    const filter1 = document.querySelector('#filter1')
+
+    for (let i=0; i<filterBoxes.length; i++){
+        filterBoxes[i].addEventListener('click', function(event){
+            event.preventDefault();
+            if(event.target === filter1){
+                console.log('bang');
+                if (myImg.complete) {
+                    pixelsJS.filterImg(myImg, "horizontal_lines");
+                } else {
+                    // If the image is not loaded, set up an onload event handler
+                    myImg.onload = function () {
+                        pixelsJS.filterImg(myImg, "horizontal_lines");
+                    };
+                }       
+            }else if(event.target === filter2){
+                console.log('boom');
+                if (myImg.complete) {
+                    pixelsJS.filterImg(myImg, "perfume");
+                } else {
+                    // If the image is not loaded, set up an onload event handler
+                    myImg.onload = function () {
+                        pixelsJS.filterImg(myImg, "perfume");
+                    };
+                }
+            }else if(event.target === filter3){
+                console.log('boof');
+                if (myImg.complete) {
+                    pixelsJS.filterImg(myImg, "vintage");
+                } else {
+                    // If the image is not loaded, set up an onload event handler
+                    myImg.onload = function () {
+                        pixelsJS.filterImg(myImg, "vintage");
+                    };
+                }
+            }else if(event.target === filter4){
+                console.log('boof');
+                if (myImg.complete) {
+                    pixelsJS.filterImg(myImg, "extra_offset_blue");
+                } else {
+                    // If the image is not loaded, set up an onload event handler
+                    myImg.onload = function () {
+                        pixelsJS.filterImg(myImg, "extra_offset_blue");
+                    };
+                }
+            }
+        });
+    }
 
 })();
