@@ -77,11 +77,11 @@ button:hover{
 }
 
 
-section{
+/* section{
     display: flex;
     flex-direction: column;
     gap: 12px;
-}
+} */
 
 
 
@@ -94,7 +94,7 @@ main{
 
 p, li{
     max-width: 800px;
-    line-height: 1.3em;
+    line-height: 1.4em;
 }
 
 span{
