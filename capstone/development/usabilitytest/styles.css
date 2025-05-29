@@ -11,7 +11,7 @@ h1{
 }
 
 p{
-    font-size: 1.3em;
+    font-size: 1.1em;
     line-height: 1.3em;
     margin: 0;
 }
@@ -25,18 +25,43 @@ main{
 }
 
 
+#title{
+    /* display: flex; */
+    flex-direction: column;
+    gap: 42px;
+    height: 100vh;
+    justify-content: center;
+    
+}
+
+#start-btn:hover{
+    cursor: pointer;
+}
+
+#title h1{
+    text-align: center;
+}
+
+#scene1{
+    flex-direction: column;
+    gap: 24px;
+    overflow-y: auto;
+}
+
 .messages{
     display: flex;
     flex-direction: column;
-    /* background-color: cadetblue; */
-    height: 100%;
-    overflow-y: hidden;
+    background-color: cadetblue;
+    height: 70vh;
+    overflow-y: scroll;
     justify-content: flex-end;
+    gap: 12px;
 }
 
 .ai-message{
     background-color: #F0F0F0;
     padding: 20px;
+    width: fit-content;
     max-width: 600px;
     border-radius: 20px;
 }
@@ -65,7 +90,7 @@ main{
 
 .option{
     padding: 20px;
-    background-color: #F0F0F0;
+    background-color: coral;
     border-radius: 20px;
     min-width: 200px;
     text-align: center;
@@ -77,16 +102,10 @@ main{
     border: 1px solid black;
     padding: 20px;
     border-radius: 20px;
-    height: 72px;
-    /* width: 1000px; */
-    width: 100%;
-
+    justify-content: space-between;
+    align-items: center;
     display: flex;
     gap: 50px;
-    justify-content: center;
-
-    /* position: fixed; */
-    bottom: 40px;
 }
 
 .enter-content{
@@ -96,10 +115,20 @@ main{
 }
 
 .fa-paper-plane{
-    font-size: 24px;
+    font-size: 12px;
     padding: 15px;
     background-color: black;
     color: #F8F8F8;
     border-radius: 10000px;
     height: fit-content;
+}
+
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: flex;
+    flex-direction: column;
 }
