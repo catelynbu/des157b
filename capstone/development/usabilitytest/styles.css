@@ -48,14 +48,16 @@ main{
     overflow-y: auto;
 }
 
+
 .messages{
     display: flex;
     flex-direction: column;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     height: 70vh;
-    overflow-y: scroll;
-    justify-content: flex-end;
+    overflow-y: auto;
+    /* justify-content: flex-end; */
     gap: 12px;
+    
 }
 
 .ai-message{
