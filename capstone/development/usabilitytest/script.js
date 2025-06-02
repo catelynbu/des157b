@@ -9,6 +9,16 @@
 
     document.querySelector('#scene1').className = 'show';
 
-    
   })
+
+  const option1 = document.querySelector('#option1');
+
+  option1.addEventListener('click', function(){
+    // document.querySelector('.messsages').innerHTML += '<p class="user-message">I chose this option.</p>'
+    
+    console.log('bleep');
+  })
+
+
+
 })();

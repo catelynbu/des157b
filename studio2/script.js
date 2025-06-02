@@ -29,8 +29,6 @@ function outputHTML (dayData){
     
     const emails = document.querySelectorAll('.email');
 
-    const days = document.querySelectorAll('.day');
-
     const numbers = document.querySelectorAll('.numbers');
     const notif = document.querySelectorAll('.dot')
 
@@ -52,6 +50,20 @@ function outputHTML (dayData){
             numbers[i].classList.add('hidden');
         })
     }
+
+
+    // const myForm = document.querySelector('form');
+
+    // myForm.addEventListener('submit', function(event){
+    //     event.preventDefault();
+    //     processFormData(formData);
+    // })
+
+    // function processFormData(formData){
+    //     if (input = 5){
+    //         alert('you said 5 emails');
+    //     }
+    // }
 
 })();
 
