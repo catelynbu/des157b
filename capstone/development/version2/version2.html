@@ -15,70 +15,83 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
-    <!-- font awesone icons -->
+    <!-- font awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <!-- My Script -->
     <script src="script.js" defer></script>
 
-    <title>capstone user test</title>
+    <title>version 2 capstone code</title>
 </head>
 <body>
 
-    <main>
-        <section id="title" class="show">
-            <h1>title</h1>
-            
-            <!-- <section id="start-btn" class="textbox">
+<main>
+    <section id="title" class="show">
+        <h1>title</h1>
+
+        <div class="options-bar">
+            <section id="title-option1" class="textbox">
                 <p>Start</p>
-    
-
-                <i class="far fa-paper-plane"></i>
-            </section> -->
-        </section>
-
-
-        <section id="scene1" class="hide">
-            <h1>Scenario 1</h1>
-
-            <section class="messages">
-                <p class="ai-message">Hello there.</p>
-
-                <p class="ai-message">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>
-
-            </section>
-        </section>
-
-        <section id="scene2" class="hide">
-            <h1>Scenario 2</h1>
-
-            <section class="messages">
-                <p class="ai-message">this is scene 2</p>
-
-                <p class="ai-message">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos?</p>
-
-            </section>
-        </section>
-
-        <div class="bottom-bar">
-            <section id="option1" class="textbox">
-                <p>placeholder</p>
-    
-                <i class="far fa-paper-plane"></i>
-            </section>
-
-            <section id="option2" class="textbox">
-                <p>placeholder</p>
-    
                 <i class="far fa-paper-plane"></i>
             </section>
         </div>
-        
+    </section>
 
-    </main>
-    
+    <section id="scene1" class="hide">
+        <h1>Scenario 1</h1>
 
-    <div id="vector1"></div>
-    <div id="vector2"></div>
+        <section class="messages">
+            <p class="ai-message">Hello there.</p>
+            <p class="ai-message">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>
+        </section>
+
+        <div id="scene1-options" class="options-bar">
+            <section id="opt-1a" class="textbox">
+                <p>1a Reckless Option</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+
+            <section id="opt-1b" class="textbox">
+                <p>1b Responsible Option</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+
+            <section id="opt-1c" class="textbox hide">
+                <p>Let's move on</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+        </div>
+    </section>
+
+    <section id="scene2" class="hide">
+        <h1>Scenario 2</h1>
+
+        <section class="messages">
+            <p class="ai-message">this is scene 2</p>
+            <p class="ai-message">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>
+        </section>
+
+        <div id="scene2-options" class="options-bar">
+            <section id="opt-2a" class="textbox">
+                <p>Reckless Option</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+
+            <section id="opt-2b" class="textbox">
+                <p>Responsible Option</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+
+            <section id="opt-2c" class="textbox hide">
+                <p>Let's move on</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+        </div>
+    </section>
+</main>
+
+<div id="vector1"></div>
+<div id="vector2"></div>
+
 </body>
 </html>

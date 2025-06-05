@@ -3,13 +3,13 @@
   console.log('reading js');
 
   //variables
-  const option1 = document.querySelector('#option1');
-  const option1text = document.querySelector('#option1 p');
-
-  const option2 = document.querySelector('#option2');
-  const option2text = document.querySelector('#option2 p');
 
   const messages = document.querySelector(".messages");
+
+  let vectorOpacity = 1; // Initial opacity
+
+
+  let counter = 0;
   
 
 
@@ -19,14 +19,11 @@
 
   //title screen: hides option 2, event handler for option 1 -> starts scene 1, removes 'hide' from option2
   function title(){
-    option2.classList.add('hide');
+    console.log(counter);
 
-    option1text.textContent = 'Start';
-
-    option1.addEventListener('click', function(){
+    document.querySelector('#title-option1').addEventListener('click', function(){
+      console.log('title off, scene1 on');
       scene1();
-
-      option2.classList.remove('hide');
 
     });
   };
@@ -40,22 +37,23 @@
     document.querySelector('#scene1').className = 'show';
 
 
-    //filling text for options
-    option1text.textContent = 'reckless option';
-    option2text.textContent = 'responsible option';
 
 
+    //user selects OPTION1 -- reckless
+    document.querySelector('#opt-1a').addEventListener('click', function() {
+      counter--;
+      opacity();
+      console.log(counter);
 
-    //user selects OPTION1
-    option1.addEventListener('click', function(event) {
-      console.log('mustard');
+
+      console.log('user picked reckless option');
 
       //user sends message
       messages.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
 
 
       //options bar hides
-      document.querySelector('.bottom-bar').classList.add("hide");
+      document.querySelector('#scene1-options').classList.add("hide");
 
 
       //chatbot responds
@@ -69,14 +67,11 @@
             //chatbot asks if user is ready to move on
             messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
 
-            //option bar shows, option2 hides, option1 text changes
-            document.querySelector('.bottom-bar').classList.remove('hide');
-            option2.classList.add('hide');
-            option1text.textContent = "Let's move on";
-
-            option1.addEventListener('click', function(){
-              scene2();
-            });
+            //option bar shows
+            document.querySelector('#scene1-options').classList.remove('hide');
+            document.querySelector('#opt-1a').classList.add('hide');
+            document.querySelector('#opt-1b').classList.add('hide');
+            document.querySelector('#opt-1c').classList.remove('hide');
 
 
           }, 2000)
@@ -88,16 +83,19 @@
 
 
 
-    //user selects OPTION2
-    option2.addEventListener('click', function(event) {
-      console.log('mustard');
+    //user selects OPTION2 -- responsible
+    document.querySelector('#opt-1b').addEventListener('click', function() {
+      counter++;
+      console.log(counter);
+
+      console.log('user picked responsible option');
 
       //user sends message
       messages.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
 
 
       //options bar hides
-      document.querySelector('.bottom-bar').classList.add("hide");
+      document.querySelector('#scene1-options').classList.add("hide");
 
 
       //chatbot responds
@@ -112,13 +110,12 @@
             messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
 
             //option bar shows, option2 hides, option1 text changes
-            document.querySelector('.bottom-bar').classList.remove('hide');
-            option2.classList.add('hide');
-            option1text.textContent = "Let's move on";
+            document.querySelector('#scene1-options').classList.remove('hide');
+            document.querySelector('#opt-1a').classList.add('hide');
+            document.querySelector('#opt-1b').classList.add('hide');
+            document.querySelector('#opt-1c').classList.remove('hide');
 
-            option1.addEventListener('click', function(){
-              scene2();
-            });
+
 
 
           }, 2000)
@@ -128,31 +125,128 @@
       }, 2000);
     })
 
+
+    //THIRD OPTION APPEARS  
+    document.querySelector('#opt-1c').addEventListener('click', function(){
+      console.log('this is when scene 2 play')
+      scene2();
+      // opacity();
+      // console.log(counter);
+    });
   }
 
     
 
   //scene 2
   function scene2(){
-    //hiding showing scene1 and scene2
+    //hiding showing title and scene1
     document.querySelector('#scene1').className = 'hide';
     document.querySelector('#scene2').className = 'show';
 
 
-    //showing the options again
-    document.querySelector('.bottom-bar').classList.remove('hide');
+    //user selects OPTION1 -- reckless
+    document.querySelector('#opt-2a').addEventListener('click', function() {
+      counter--;
+      opacity();
+      console.log(counter);
 
 
-    //filling text for options
-    option1text.textContent = 'responsible option';
-    option2text.textContent = 'reckless option';
+      console.log('user picked reckless option');
+
+      //user sends message
+      messages.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
+
+
+      //options bar hides
+      document.querySelector('#scene2-options').classList.add("hide");
+
+
+      //chatbot responds
+      setTimeout(function(){
+        document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the reckless option will affect you.</p>';
+
+        setTimeout(function(){
+          document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+
+          setTimeout(function(){
+            //chatbot asks if user is ready to move on
+            messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+
+            //option bar shows
+            document.querySelector('#scene2-options').classList.remove('hide');
+            document.querySelector('#opt-2a').classList.add('hide');
+            document.querySelector('#opt-2b').classList.add('hide');
+            document.querySelector('#opt-2c').classList.remove('hide');
+
+
+          }, 2000)
+
+
+        }, 2000);
+      }, 2000);
+    })
+
+    //user selects OPTION2 -- responsible
+    document.querySelector('#opt-2b').addEventListener('click', function() {
+      counter++;
+      console.log(counter);
+
+      console.log('user picked responsible option');
+
+      //user sends message
+      messages.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
+
+
+      //options bar hides
+      document.querySelector('#scene2-options').classList.add("hide");
+
+
+      //chatbot responds
+      console.log('peanut butter');
+      document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
+      document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+      messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+
+      // setTimeout(function(){
+      //   document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
+
+      //   setTimeout(function(){
+      //     document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+
+      //     setTimeout(function(){
+      //       //chatbot asks if user is ready to move on
+      //       messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+
+      //       //option bar shows, option2 hides, option1 text changes
+      //       document.querySelector('#scene2-options').classList.remove('hide');
+      //       document.querySelector('#opt-2a').classList.add('hide');
+      //       document.querySelector('#opt-2b').classList.add('hide');
+      //       document.querySelector('#opt-2c').classList.remove('hide');
 
 
 
 
+      //     }, 2000)
 
+
+      //   }, 2000);
+      // }, 2000);
+    })
 
   }
+
+
+
+  function opacity(){
+
+    if (counter--) {
+      console.log('lower!');
+
+      vectorOpacity = Math.max(0, vectorOpacity - 0.2); // Decrease but don’t go below 0
+      document.querySelector('#vector1').style.opacity = vectorOpacity;
+    }
+  }
+
 
 
 

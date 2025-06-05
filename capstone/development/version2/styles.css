@@ -44,7 +44,7 @@ main{
     text-align: center;
 }
 
-#scene1{
+#scene1, #scene2, #scene3, #scene4, #scene5{
     flex-direction: column;
     gap: 24px;
     overflow-y: auto;
@@ -56,8 +56,8 @@ main{
     flex-direction: column;
     /* background-color: cadetblue; */
     height: 70vh;
-    overflow-y: auto;
-    /* justify-content: flex-end; */
+    overflow-y: scroll;
+    justify-content: flex-end;
     gap: 12px;
     
 }
@@ -80,7 +80,7 @@ main{
 
 
 
-.bottom-bar{
+.options-bar{
     display: flex;
     flex-direction: column;
     gap: 24px;
