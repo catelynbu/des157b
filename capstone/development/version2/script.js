@@ -439,7 +439,7 @@
   //ending: summary 2
   function summary2(){
     document.querySelector('#scene3').className = 'hide';     //replace #scene3 with the last scene
-    document.querySelector('#summary1').className = 'show';
+    document.querySelector('#summary2').className = 'show';
 
     document.querySelector('#reckless-score').innerHTML = `<p>You chose the responsible option <span>${responsibleScore}</span> out of 5 times.</p>`
   }
