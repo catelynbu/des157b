@@ -459,6 +459,7 @@
 
       vectorOpacity = Math.max(0, vectorOpacity - 0.2); // Decrease but don’t go below 0
       document.querySelector('#vector1').style.opacity = vectorOpacity;
+      document.querySelector('#vector2').style.opacity = vectorOpacity;
     }
   }
 
