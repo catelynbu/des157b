@@ -3,13 +3,19 @@
   console.log('reading js');
 
   //variables
+  const messages1 = document.querySelector('#messages1');
+  const messages2 = document.querySelector('#messages2');
 
-  const messages = document.querySelector(".messages");
+
 
   let vectorOpacity = 1; // Initial opacity
 
 
   let counter = 0;
+
+  let responsibleScore = 0;
+
+  let recklessScore = 0;
   
 
 
@@ -19,7 +25,10 @@
 
   //title screen: hides option 2, event handler for option 1 -> starts scene 1, removes 'hide' from option2
   function title(){
-    console.log(counter);
+    console.log(`the counter is ${counter}`);
+    console.log(`the responsbile score is ${responsibleScore}`);
+    console.log(`the reckless score is ${recklessScore}`);
+
 
     document.querySelector('#title-option1').addEventListener('click', function(){
       console.log('title off, scene1 on');
@@ -36,20 +45,43 @@
     document.querySelector('#title').className = 'hide';
     document.querySelector('#scene1').className = 'show';
 
+    document.querySelector('#scene1-options').classList.add("hide");
+
+
+    
+
+    setTimeout(function(){
+      messages1.innerHTML += '<p class="ai-message">Hello there.</p>';
+
+      setTimeout(function(){
+        messages1.innerHTML += '<p class="ai-message">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>';
+
+        setTimeout(function(){
+          document.querySelector('#scene1-options').classList.remove("hide");
+
+        }, 2000)
+
+      }, 1000);
+
+    }, 1000);
+
 
 
 
     //user selects OPTION1 -- reckless
     document.querySelector('#opt-1a').addEventListener('click', function() {
+      recklessScore++;
       counter--;
       opacity();
-      console.log(counter);
+
+      console.log(`the counter is ${counter}`);
+      console.log(`the reckless score is ${recklessScore}`);
 
 
       console.log('user picked reckless option');
 
       //user sends message
-      messages.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
+      messages1.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
 
 
       //options bar hides
@@ -58,14 +90,14 @@
 
       //chatbot responds
       setTimeout(function(){
-        document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the reckless option will affect you.</p>';
+        messages1.innerHTML += '<p class="ai-message">Interesing choice, this is how the reckless option will affect you.</p>';
 
         setTimeout(function(){
-          document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+          messages1.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
 
           setTimeout(function(){
             //chatbot asks if user is ready to move on
-            messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+            messages1.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
 
             //option bar shows
             document.querySelector('#scene1-options').classList.remove('hide');
@@ -86,12 +118,14 @@
     //user selects OPTION2 -- responsible
     document.querySelector('#opt-1b').addEventListener('click', function() {
       counter++;
-      console.log(counter);
+      responsibleScore++;
+      console.log(`the counter is ${counter}`);
+      console.log(`the responsbile score is ${responsibleScore}`);
 
       console.log('user picked responsible option');
 
       //user sends message
-      messages.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
+      messages1.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
 
 
       //options bar hides
@@ -100,14 +134,14 @@
 
       //chatbot responds
       setTimeout(function(){
-        document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
+        messages1.innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
 
         setTimeout(function(){
-          document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+          messages1.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
 
           setTimeout(function(){
             //chatbot asks if user is ready to move on
-            messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+            messages1.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
 
             //option bar shows, option2 hides, option1 text changes
             document.querySelector('#scene1-options').classList.remove('hide');
@@ -143,18 +177,39 @@
     document.querySelector('#scene1').className = 'hide';
     document.querySelector('#scene2').className = 'show';
 
+    document.querySelector('#scene2-options').classList.add("hide");
+
+
+    setTimeout(function(){
+      messages2.innerHTML += '<p class="ai-message">Hello there.</p>';
+
+      setTimeout(function(){
+        messages2.innerHTML += '<p class="ai-message">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>';
+
+        setTimeout(function(){
+          document.querySelector('#scene2-options').classList.remove("hide");
+
+        }, 2000)
+
+      }, 1000);
+
+    }, 1000);
+
 
     //user selects OPTION1 -- reckless
     document.querySelector('#opt-2a').addEventListener('click', function() {
+      recklessScore++;
       counter--;
       opacity();
-      console.log(counter);
+
+      console.log(`the counter is ${counter}`);
+      console.log(`the reckless score is ${recklessScore}`);
 
 
       console.log('user picked reckless option');
 
       //user sends message
-      messages.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
+      messages2.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
 
 
       //options bar hides
@@ -163,14 +218,14 @@
 
       //chatbot responds
       setTimeout(function(){
-        document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the reckless option will affect you.</p>';
+        messages2.innerHTML += '<p class="ai-message">Interesing choice, this is how the reckless option will affect you.</p>';
 
         setTimeout(function(){
-          document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+          messages2.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
 
           setTimeout(function(){
             //chatbot asks if user is ready to move on
-            messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+            messages2.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
 
             //option bar shows
             document.querySelector('#scene2-options').classList.remove('hide');
@@ -189,12 +244,14 @@
     //user selects OPTION2 -- responsible
     document.querySelector('#opt-2b').addEventListener('click', function() {
       counter++;
-      console.log(counter);
+      responsibleScore++;
+      console.log(`the counter is ${counter}`);
+      console.log(`the responsbile score is ${responsibleScore}`);
 
       console.log('user picked responsible option');
 
       //user sends message
-      messages.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
+      messages2.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
 
 
       //options bar hides
@@ -203,34 +260,34 @@
 
       //chatbot responds
       console.log('peanut butter');
-      document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
-      document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
-      messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+      // document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
+      // document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+      // messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
 
-      // setTimeout(function(){
-      //   document.querySelector('.messages').innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
+      setTimeout(function(){
+        messages2.innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
 
-      //   setTimeout(function(){
-      //     document.querySelector('.messages').innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+        setTimeout(function(){
+          messages2.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
 
-      //     setTimeout(function(){
-      //       //chatbot asks if user is ready to move on
-      //       messages.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+          setTimeout(function(){
+            //chatbot asks if user is ready to move on
+            messages2.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
 
-      //       //option bar shows, option2 hides, option1 text changes
-      //       document.querySelector('#scene2-options').classList.remove('hide');
-      //       document.querySelector('#opt-2a').classList.add('hide');
-      //       document.querySelector('#opt-2b').classList.add('hide');
-      //       document.querySelector('#opt-2c').classList.remove('hide');
-
-
+            //option bar shows, option2 hides, option1 text changes
+            document.querySelector('#scene2-options').classList.remove('hide');
+            document.querySelector('#opt-2a').classList.add('hide');
+            document.querySelector('#opt-2b').classList.add('hide');
+            document.querySelector('#opt-2c').classList.remove('hide');
 
 
-      //     }, 2000)
 
 
-      //   }, 2000);
-      // }, 2000);
+          }, 2000)
+
+
+        }, 2000);
+      }, 2000);
     })
 
   }
@@ -249,26 +306,6 @@
 
 
 
-
-
-
-
-  //use this instead of calling scrollToBottom() in each option---- needs to be inside each event handler though meaning it will need to be refactored later
-  // if (message) {
-  //   document.querySelector('.messages').innerHTML += `<p class="user-message">${message}</p>`;
-  //   scrollToBottom();
-  // }
-
-
-
-  //to make sure the messages always appear at the bottom --- not working
-  // function scrollToBottom() {
-  //   const messages = document.querySelector('.messages');
-  //   messages.scrollTop = messages.scrollHeight;
-  // }
-
-  // scroll to bottom on initial load --- doesnt work?
-  // window.addEventListener('load', scrollToBottom);
 
 
   //use onclick rather than click?
