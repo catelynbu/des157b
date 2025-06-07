@@ -18,6 +18,11 @@ p{
 }
 
 
+
+span{
+    font-weight: 700;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -49,6 +54,11 @@ main{
     gap: 24px;
     overflow-y: auto;
     margin-bottom: auto;
+
+    background-color: #f0f0f03b;
+    border-radius: 8px;
+    padding: 36px;
+    backdrop-filter: blur(8px);
 }
 
 
@@ -128,6 +138,23 @@ main{
     height: fit-content;
 }
 
+
+
+#summary1, #summary2{
+    flex-direction: column;
+    gap: 42px;
+    background-color: #f0f0f03b;
+    border-radius: 8px;
+    padding: 36px;
+    backdrop-filter: blur(8px);
+}
+
+.ending-note{
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    padding: 24px 0;
+}
 
 .hide{
     display: none;
