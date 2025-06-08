@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
 
     <!-- font awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -23,20 +24,31 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+
+
+
     <!-- My Script -->
     <script src="script.js" defer></script>
 
-    <title>version 2 capstone code</title>
+    <title>final</title>
 </head>
 <body>
 
 <main>
-    <section id="title">
-        <h1>title</h1>
+    <section id="title" class="show">
+        <h1>What does your <span class="color-font">AI journey</span> look like?</h1>
 
-        <div class="options-bar">
+        <!-- <p>An interactive experience exploring your future with AI tools.</p> -->
+
+        <p>Explore how your current interactions and behaviors using AI tools may affect your future.</p>
+
+        <div class="options-bar titlescreen-option">
             <section id="title-option1" class="textbox">
-                <p>Start</p>
+                <p id="cycle">Send your first message.</p>
                 <i class="far fa-paper-plane"></i>
             </section>
         </div>
@@ -156,6 +168,12 @@
 
 <div id="vector1"></div>
 <div id="vector2"></div>
+
+<div id="vector3a"></div>
+<div id="vector3b"></div>
+
+<div id="vector4a"></div>
+<div id="vector4b"></div>
 
 </body>
 </html>

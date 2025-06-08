@@ -80,7 +80,7 @@
       setTimeout(function(){
         messages1.innerHTML += '<p class="ai-message split">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>';
 
-        animateSplit('.split');
+        // animateSplit('.split');
 
         setTimeout(function(){
           document.querySelector('#scene1-options').classList.remove("hide");
@@ -469,19 +469,19 @@
   }
 
 
-  function animateSplit(target, onComplete) {
-    document.fonts.ready.then(() => {
-      let split = SplitText.create(target, { type: "words" });
+  // function animateSplit(target, onComplete) {
+  //   document.fonts.ready.then(() => {
+  //     let split = SplitText.create(target, { type: "words" });
 
-      gsap.from(split.words, {
-        duration: 1.5,
-        y: 0,
-        autoAlpha: 0,
-        stagger: 0.05,
-        onComplete: onComplete
-      });
-    });
-  }
+  //     gsap.from(split.words, {
+  //       duration: 1.5,
+  //       y: 0,
+  //       autoAlpha: 0,
+  //       stagger: 0.05,
+  //       onComplete: onComplete
+  //     });
+  //   });
+  // }
 
 
 
@@ -514,6 +514,13 @@
       vectorOpacity = Math.max(0, vectorOpacity - 0.2); // Decrease but don’t go below 0
       document.querySelector('#vector1').style.opacity = vectorOpacity;
       document.querySelector('#vector2').style.opacity = vectorOpacity;
+
+      document.querySelector('#vector3a').style.opacity = vectorOpacity;
+      document.querySelector('#vector3b').style.opacity = vectorOpacity;
+
+      document.querySelector('#vector4a').style.opacity = vectorOpacity;
+      document.querySelector('#vector4b').style.opacity = vectorOpacity;
+
     }
   }
 
@@ -521,5 +528,86 @@
 
 
 
-  //use onclick rather than click?
+//gsap.registerPlugin(Draggable, InertiaPlugin);
+gsap.registerPlugin(InertiaPlugin) 
+
+
+  const spin = gsap.timeline({repeat:-1})
+  .set("#vector1", { opacity: 1 })
+  .fromTo("#vector1", {
+    transformOrigin: "50%",
+    x: 30,
+    y: 30
+  },{
+    duration: 40,
+    rotation: 360,
+    ease: "none",
+  });
+
+Draggable.create("#vector1", {
+  type: "rotation",
+  trigger: "#vector1",
+  inertia: true,
+  onPressInit: () => spin.pause(),
+  onDrag: setSpinProgress,  // on drag & throw, use rotation as a progress value for the spin timeline
+  onThrowUpdate: setSpinProgress,
+  onThrowComplete: () => {
+    spin.resume();
+    gsap.fromTo(spin, { timeScale: 0 }, { timeScale: 1, ease: "power1.in" });
+  }
+});
+
+function setSpinProgress() {
+  spin.progress(gsap.utils.wrap(0, 360, this.rotation) / 360);
+}
+
+Draggable.create("#vector2", {
+  type: "rotation",
+  inertia: true
+});
+
+Draggable.create("#vector3a", {
+  type: "rotation",
+  inertia: true
+});
+
+Draggable.create("#vector3b", {
+  type: "rotation",
+  inertia: true
+});
+
+
+// const messages = [
+//     "Start your journey now",
+//     "What path will you take?",
+//     "Let's get going",
+//     "I wonder what's next"
+//   ];
+
+//   const textBox = document.querySelector("#cycle");
+//   let index = 0;
+
+//   function typeMessage(message, callback) {
+//     textBox.textContent = ""; // Clear previous text
+//     const chars = message.split("");
+//     chars.forEach((char, i) => {
+//       gsap.delayedCall(i * 0.05, () => {
+//         textBox.textContent += char;
+//         if (i === chars.length - 1 && callback) {
+//           gsap.delayedCall(1.5, callback); // Wait a bit before next message
+//         }
+//       });
+//     });
+//   }
+
+//   function cycleMessages() {
+//     typeMessage(messages[index], () => {
+//       index = (index + 1) % messages.length;
+//       cycleMessages();
+//     });
+//   }
+
+//   // Start the cycle
+//   cycleMessages();
+
 })();
