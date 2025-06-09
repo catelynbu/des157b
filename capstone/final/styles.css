@@ -12,7 +12,7 @@ h1{
 }
 
 p{
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.3em;
     margin: 0;
 }
@@ -34,8 +34,9 @@ main{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    height: 90vh;
+    height: 95vh;
     justify-content: center;
+    
 }
 
 
@@ -89,14 +90,15 @@ main{
 
 .ai-message{
     width: fit-content;
-    max-width: 600px;
+    max-width: 430px;
 }
 
 
 
 .user-message{
-    max-width: 600px;
+    max-width: 430px;
     margin-left: auto;
+    margin: 10px 0 10px auto;
 }
 
 
@@ -191,8 +193,8 @@ main{
     position: absolute;
     bottom: 80px;
     right: 20px;
-    /* z-index: -1; */
-    
+    transition: filter 0.3s ease;
+
     transform: scale(1.3) rotate(-25deg);
 }
 
@@ -207,16 +209,18 @@ main{
     top: -150px;
     left: -50px;
     /* z-index: -1; */
-    
-    transform: scale(1.1);
+    transition: transform 0.2s;
 
-    animation: spin 9s linear infinite;
+    transform: scale(1.1);
+    transition: filter 0.3s ease;
+
+    animation: spinPause 6s ease-in-out infinite;
 
 }
 
 
 #vector2:hover{
-    animation: spin 3s linear infinite;
+    animation: spinPause 2s linear infinite;
 
 }
 
@@ -234,8 +238,19 @@ main{
     top: -100px;
 
     animation: float 5s ease-in-out infinite;
+    transition: filter 0.3s ease;
+
+
+    transform: scale(0.4);
 
 }
+
+/* #vector3a:hover {
+  animation: spinPause 2s ease-in-out infinite;
+
+  transform: scale(0.4);
+
+} */
 
 #vector3b{
     position: fixed;
@@ -243,7 +258,15 @@ main{
     top: 40px;
 
     animation: floatAlt 5s ease-in-out infinite;
+    transition: filter 0.3s ease;
 
+
+}
+
+@keyframes spinPause {
+  0%   { transform: rotate(0deg); }
+  80%  { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
 }
 
 #vector4a{
@@ -254,12 +277,18 @@ main{
 
     position: fixed;
     left: -70px;
-    bottom: 40px;
+    bottom: 60px;
 
     transform: scale(0.8);
+    transition: filter 0.3s ease;
 
-    /* animation: float 5s ease-in-out infinite; */
+    animation: twinkle2 3s ease-out infinite;
 
+}
+
+.bright:hover {
+  filter: brightness(1.2);
+  transition: filter 0.3s ease;
 }
 
 #vector4b{
@@ -273,9 +302,26 @@ main{
     bottom: -100px;
 
     transform: scale(0.7);
+    transition: filter 0.3s ease, transform 0.3s ease;
 
-    /* animation: floatAlt 5s ease-in-out infinite; */
+    animation: twinkle 2.5s ease-out infinite;
 
+}
+
+@keyframes twinkle {
+  0%   { transform: scale(0.7) rotate(0deg); }
+  40%  { transform: scale(0.8) rotate(5deg); }
+  60%  { transform: scale(0.6) rotate(-3deg); }
+  80%  { transform: scale(0.75) rotate(3deg); }
+  100% { transform: scale(0.7) rotate(0deg); }
+}
+
+@keyframes twinkle2 {
+  0%   { transform: scale(0.85) rotate(0deg); }
+  40%  { transform: scale(0.9) rotate(3deg); }
+  60%  { transform: scale(0.8) rotate(-2deg); }
+  80%  { transform: scale(0.87) rotate(2deg); }
+  100% { transform: scale(0.85) rotate(0deg); }
 }
 
 
@@ -313,4 +359,16 @@ main{
   100% {
     transform: translateY(0) scale(0.5);
   }
+}
+
+
+@keyframes softBounceShake {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-3px); }
+  30% { transform: translateX(3px); }
+  45% { transform: translateX(-2px); }
+  60% { transform: translateX(2px); }
+  75% { transform: translateX(-1px); }
+  90% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
 }

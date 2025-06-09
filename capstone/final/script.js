@@ -75,10 +75,10 @@
       // document.querySelector('#scene1-options').classList.remove("hide");
 
      setTimeout(function(){
-       messages1.innerHTML += '<p class="ai-message split">Hello there.</p>';
+       messages1.innerHTML += '<p class="ai-message split">You are a college student with a 10-page research paper swiftly approaching its deadline. You\'re feeling overwhelmed with other classes and extracurriculars, making it difficult to find the time to fully write out your paper. Luckily, your professor allows the usage of AI tools for ideation purposes.</p>';
 
       setTimeout(function(){
-        messages1.innerHTML += '<p class="ai-message split">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>';
+        messages1.innerHTML += '<p class="ai-message split">How would you handle this situation?</p>';
 
         // animateSplit('.split');
 
@@ -87,9 +87,9 @@
 
         }, 2000)
 
-      }, 1000);
+      }, 5000);
 
-    }, 200);
+    }, 500);
 
 
     //user selects OPTION1 -- reckless
@@ -105,7 +105,7 @@
       console.log('user picked reckless option');
 
       //user sends message
-      messages1.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
+      messages1.innerHTML += '<p class="user-message">I would use AI to generate a thesis and paragraphs based off of basic ideas I have. I\'ll edit the text to sound more like me.</p>';
 
 
       //options bar hides
@@ -114,14 +114,14 @@
 
       //chatbot responds
       setTimeout(function(){
-        messages1.innerHTML += '<p class="ai-message">Interesing choice, this is how the reckless option will affect you.</p>';
+        messages1.innerHTML += '<p class="ai-message"> Interesting choice. Although using AI to brainstorm ideas is permitted, don\'t let AI write the paper for you.</p>';
 
         setTimeout(function(){
-          messages1.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+          messages1.innerHTML += '<p class="ai-message">Even if you rewrite a couple sentences or change a few words, the generated text is not your original thoughts.</p>';
 
           setTimeout(function(){
             //chatbot asks if user is ready to move on
-            messages1.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+            messages1.innerHTML += '<p class="ai-message">Let\'s move onto the next scenario.</p>';
 
             //option bar shows
             document.querySelector('#scene1-options').classList.remove('hide');
@@ -148,7 +148,7 @@
       console.log('user picked responsible option');
 
       //user sends message
-      messages1.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
+      messages1.innerHTML += '<p class="user-message">I would use AI to brainstorm ideas, aid in finding research points, and use it for constructive critiques.</p>';
 
 
       //options bar hides
@@ -204,19 +204,19 @@
 
     //beginning messages
     setTimeout(function(){
-      messages2.innerHTML += '<p class="ai-message">Hello there.</p>';
+      messages2.innerHTML += '<p class="ai-message">You\'re trying to find your summer internship and are applying as fast as you can to multiple places. You find a really good internship opportunity that has everything you\'re looking for. But they\'re asking for a cover letter that captures your personality and goals, and you don\'t have one.</p>';
 
       setTimeout(function(){
-        messages2.innerHTML += '<p class="ai-message">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>';
+        messages2.innerHTML += '<p class="ai-message">What will you do?</p>';
 
         setTimeout(function(){
           document.querySelector('#scene2-options').classList.remove("hide");
 
         }, 2000)
 
-      }, 1000);
+      }, 5000);
 
-    }, 1000);
+    }, 500);
 
 
     //user selects OPTION1 -- reckless
@@ -232,7 +232,7 @@
       console.log('user picked reckless option');
 
       //user sends message
-      messages2.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
+      messages2.innerHTML += '<p class="user-message">I would put in my resume and the internship posting and ask AI to write a cover letter off of that. I makes some tweaks afterwards.</p>';
 
 
       //options bar hides
@@ -241,14 +241,14 @@
 
       //chatbot responds
       setTimeout(function(){
-        messages2.innerHTML += '<p class="ai-message">Interesing choice, this is how the reckless option will affect you.</p>';
+        messages2.innerHTML += '<p class="ai-message">Does this method really capture you though?</p>';
 
         setTimeout(function(){
-          messages2.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+          messages2.innerHTML += '<p class="ai-message">It\'s easy to use AI to generate a persuasive piece of writing, especially when you\'re tired and overwhelmed, but being able to verbalize your own ideas is a vital skill. What if someone asked you this question in the workplace? Would you be able to tell them your career goals?</p>';
 
           setTimeout(function(){
             //chatbot asks if user is ready to move on
-            messages2.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+            messages2.innerHTML += '<p class="ai-message">Let\'s try another scenario.</p>';
 
             //option bar shows
             document.querySelector('#scene2-options').classList.remove('hide');
@@ -561,20 +561,20 @@ function setSpinProgress() {
   spin.progress(gsap.utils.wrap(0, 360, this.rotation) / 360);
 }
 
-Draggable.create("#vector2", {
-  type: "rotation",
-  inertia: true
-});
+// Draggable.create("#vector2", {
+//   type: "rotation",
+//   inertia: true
+// });
 
-Draggable.create("#vector3a", {
-  type: "rotation",
-  inertia: true
-});
+// Draggable.create("#vector3a", {
+//   type: "rotation",
+//   inertia: true
+// });
 
-Draggable.create("#vector3b", {
-  type: "rotation",
-  inertia: true
-});
+// Draggable.create("#vector3b", {
+//   type: "rotation",
+//   inertia: true
+// });
 
 
 // const messages = [
