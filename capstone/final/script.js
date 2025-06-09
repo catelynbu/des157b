@@ -7,8 +7,6 @@
   const messages2 = document.querySelector('#messages2');
   const messages3 = document.querySelector('#messages3');
   const messages4 = document.querySelector('#messages4');
-  const messages5 = document.querySelector('#messages5');
-
 
 
   let vectorOpacity = 1; // Initial opacity
@@ -22,7 +20,7 @@
 
 
   //running the title screen
-  title();
+  summary2();
 
 
   //title screen: hides option 2, event handler for option 1 -> starts scene 1, removes 'hide' from option2
@@ -274,7 +272,7 @@
       console.log('user picked responsible option');
 
       //user sends message
-      messages2.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
+      messages2.innerHTML += '<p class="user-message">I would use AI to give me pointers of what makes a strong cover letter. Then I would draft a letter off of that and use AI to make refinements.</p>';
 
 
       //options bar hides
@@ -283,14 +281,14 @@
 
       //chatbot responds
       setTimeout(function(){
-        messages2.innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
+        messages2.innerHTML += '<p class="ai-message">That seems like an efficient approach.</p>';
 
         setTimeout(function(){
-          messages2.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+          messages2.innerHTML += '<p class="ai-message">It\'s hard to start from scratch so getting an outline would help your process while still giving you the opportunity to share your story with your added personality</p>';
 
           setTimeout(function(){
             //chatbot asks if user is ready to move on
-            messages2.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+            messages2.innerHTML += '<p class="ai-message">Let\'s try another scenario.</p>';
 
             //option bar shows, option2 hides, option1 text changes
             document.querySelector('#scene2-options').classList.remove('hide');
@@ -311,7 +309,6 @@
     //THIRD OPTION APPEARS  
     document.querySelector('#opt-2c').addEventListener('click', function(){
       scene3();
-      opacity();
       console.log(counter);
     });
   }
@@ -328,10 +325,10 @@
 
     //beginning messages
     setTimeout(function(){
-      messages3.innerHTML += '<p class="ai-message">Hello there.</p>';
+      messages3.innerHTML += '<p class="ai-message">You are planning to attend a college career fair, seeking to make good impressions with employers and alumni to make career boosting connections. You\'re feeling a bit nervous about starting conversations with these people.</p>';
 
       setTimeout(function(){
-        messages3.innerHTML += '<p class="ai-message">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>';
+        messages3.innerHTML += '<p class="ai-message">How would you prepare for this situation?</p>';
 
         setTimeout(function(){
           document.querySelector('#scene3-options').classList.remove("hide");
@@ -343,53 +340,8 @@
     }, 1000);
 
 
-    //user selects OPTION1 -- reckless
+    //user selects OPTION1 -- responsible
     document.querySelector('#opt-3a').addEventListener('click', function() {
-      recklessScore++;
-      counter--;
-      opacity();
-
-      console.log(`the counter is ${counter}`);
-      console.log(`the reckless score is ${recklessScore}`);
-
-
-      console.log('user picked reckless option');
-
-      //user sends message
-      messages3.innerHTML += '<p class="user-message">I choose the reckless option.</p>';
-
-
-      //options bar hides
-      document.querySelector('#scene3-options').classList.add("hide");
-
-
-      //chatbot responds
-      setTimeout(function(){
-        messages3.innerHTML += '<p class="ai-message">Interesing choice, this is how the reckless option will affect you.</p>';
-
-        setTimeout(function(){
-          messages3.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
-
-          setTimeout(function(){
-            //chatbot asks if user is ready to move on
-            messages3.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
-
-            //option bar shows
-            document.querySelector('#scene3-options').classList.remove('hide');
-            document.querySelector('#opt-3a').classList.add('hide');
-            document.querySelector('#opt-3b').classList.add('hide');
-            document.querySelector('#opt-3c').classList.remove('hide');
-
-
-          }, 2000)
-
-
-        }, 2000);
-      }, 2000);
-    })
-
-    //user selects OPTION2 -- responsible
-    document.querySelector('#opt-3b').addEventListener('click', function() {
       counter++;
       responsibleScore++;
       console.log(`the counter is ${counter}`);
@@ -398,7 +350,7 @@
       console.log('user picked responsible option');
 
       //user sends message
-      messages3.innerHTML += '<p class="user-message">I choose the responsible option.</p>';
+      messages3.innerHTML += '<p class="user-message">I would use AI to research the employers and alumni that are attending to understand their backgrounds and then recall personal experiences to connect with them.</p>';
 
 
       //options bar hides
@@ -407,14 +359,14 @@
 
       //chatbot responds
       setTimeout(function(){
-        messages3.innerHTML += '<p class="ai-message">Interesing choice, this is how the responsible option will affect you.</p>';
+        messages3.innerHTML += '<p class="ai-message">That approach seems like a good way to prepare yourself to ease your nervousness.</p>';
 
         setTimeout(function(){
-          messages3.innerHTML += '<p class="ai-message">Here is some data to back up my claim.</p>';
+          messages3.innerHTML += '<p class="ai-message">Social interactions can be nerve-wracking, especially with seniors in your field of study.  Using AI to aid your research and find opportunities for personal connections can help you smoothly engage in conversations.</p>';
 
           setTimeout(function(){
             //chatbot asks if user is ready to move on
-            messages3.innerHTML += '<p class="ai-message">are you ready to move on?</p>';
+            messages3.innerHTML += '<p class="ai-message">Let\'s see what\'s next.</p>';
 
             //option bar shows, option2 hides, option1 text changes
             document.querySelector('#scene3-options').classList.remove('hide');
@@ -432,11 +384,184 @@
       }, 2000);
     })
 
+    //user selects OPTION2 -- reckless
+    document.querySelector('#opt-3b').addEventListener('click', function() {
+      recklessScore++;
+      counter--;
+      opacity();
+
+      console.log(`the counter is ${counter}`);
+      console.log(`the reckless score is ${recklessScore}`);
+
+
+      console.log('user picked reckless option');
+
+      //user sends message
+      messages3.innerHTML += '<p class="user-message">I would use to summarize information about the attendees and then ask it to write a script I can memorize and repeat later when I see them.</p>';
+
+
+      //options bar hides
+      document.querySelector('#scene3-options').classList.add("hide");
+
+
+      //chatbot responds
+      setTimeout(function(){
+        messages3.innerHTML += '<p class="ai-message">Would this approach improve your conversation skills or your memorization skills?</p>';
+
+        setTimeout(function(){
+          messages3.innerHTML += '<p class="ai-message">It\'s easy to ask AI to tell you what you should say, but that doesn\'t prepare you for a conversation that doesn\'t follow AI\'s prediction. Would this approach actually prepare you and make a meaningful connection?</p>';
+
+          setTimeout(function(){
+            //chatbot asks if user is ready to move on
+            messages3.innerHTML += '<p class="ai-message">Let\'s see what\'s next.</p>';
+
+            //option bar shows
+            document.querySelector('#scene3-options').classList.remove('hide');
+            document.querySelector('#opt-3a').classList.add('hide');
+            document.querySelector('#opt-3b').classList.add('hide');
+            document.querySelector('#opt-3c').classList.remove('hide');
+
+
+          }, 2000)
+
+
+        }, 2000);
+      }, 2000);
+    })
+
+
+
     //THIRD OPTION APPEARS  
     document.querySelector('#opt-3c').addEventListener('click', function(){
-      // summary();
-      // opacity();
-      // console.log(counter);
+      scene4();
+      console.log(counter);
+    });
+  }
+
+
+
+
+
+
+  //scene 4
+  function scene4(){
+    document.querySelector('#scene3').className = 'hide';
+    document.querySelector('#scene4').className = 'show';
+
+    document.querySelector('#scene4-options').classList.add("hide");
+
+    //beginning messages
+    setTimeout(function(){
+      messages4.innerHTML += '<p class="ai-message">You have a big midterm next week in a tough class. You/’re short on time and feeling stressed about how much material you need to review. You want to make the most of the next few days and need to prepare efficiently.</p>';
+
+      setTimeout(function(){
+        messages4.innerHTML += '<p class="ai-message">How would you study for the exam?</p>';
+
+        setTimeout(function(){
+          document.querySelector('#scene4-options').classList.remove("hide");
+
+        }, 2000)
+
+      }, 1000);
+
+    }, 1000);
+
+
+    //user selects OPTION1 -- responsible
+    document.querySelector('#opt-4a').addEventListener('click', function() {
+      counter++;
+      responsibleScore++;
+      console.log(`the counter is ${counter}`);
+      console.log(`the responsbile score is ${responsibleScore}`);
+
+      console.log('user picked responsible option');
+
+      //user sends message
+      messages4.innerHTML += '<p class="user-message">I would use AI to generate break down difficult concepts and create custom flashcards based on my class notes.</p>';
+
+
+      //options bar hides
+      document.querySelector('#scene4-options').classList.add("hide");
+
+
+      //chatbot responds
+      setTimeout(function(){
+        messages4.innerHTML += '<p class="ai-message">This method tackles studying in a proactive manner.</p>';
+
+        setTimeout(function(){
+          messages4.innerHTML += '<p class="ai-message">Creating your own flash cards could be time-consuming and using AI would speed the process up, giving you more time to study. Verifying that the content is accurate to your notes also prevents you from studying false information.</p>';
+
+          setTimeout(function(){
+            //chatbot asks if user is ready to move on
+            messages4.innerHTML += '<p class="ai-message">Let\'s see what\'s next.</p>';
+
+            //option bar shows, option2 hides, option1 text changes
+            document.querySelector('#scene4-options').classList.remove('hide');
+            document.querySelector('#opt-4a').classList.add('hide');
+            document.querySelector('#opt-4b').classList.add('hide');
+            document.querySelector('#opt-4c').classList.remove('hide');
+
+
+
+
+          }, 2000)
+
+
+        }, 2000);
+      }, 2000);
+    })
+
+    //user selects OPTION2 -- reckless
+    document.querySelector('#opt-4b').addEventListener('click', function() {
+      recklessScore++;
+      counter--;
+      opacity();
+
+      console.log(`the counter is ${counter}`);
+      console.log(`the reckless score is ${recklessScore}`);
+
+
+      console.log('user picked reckless option');
+
+      //user sends message
+      messages4.innerHTML += '<p class="user-message">I would use AI to generate summaries of each of the course\'s readings and quizzes for the sake of time, since it will cover everything I need to know.</p>';
+
+
+      //options bar hides
+      document.querySelector('#scene4-options').classList.add("hide");
+
+
+      //chatbot responds
+      setTimeout(function(){
+        messages4.innerHTML += '<p class="ai-message">How would you verify those summaries are accurate?</p>';
+
+        setTimeout(function(){
+          messages4.innerHTML += '<p class="ai-message">Using AI to summarize is a powerful tool to absorb information quickly, but it discourages verification or any deeper engagement. Would summaries be the best way to learn course concepts to ensure you actually understand the content?</p>';
+
+          setTimeout(function(){
+            //chatbot asks if user is ready to move on
+            messages4.innerHTML += '<p class="ai-message">Those are all of the scenarios I have for you. Let\'s review your responses.</p>';
+
+            //option bar shows
+            document.querySelector('#scene4-options').classList.remove('hide');
+            document.querySelector('#opt-4a').classList.add('hide');
+            document.querySelector('#opt-4b').classList.add('hide');
+            document.querySelector('#opt-4c').classList.remove('hide');
+
+
+          }, 2000)
+
+
+        }, 2000);
+      }, 2000);
+    })
+
+
+
+    //THIRD OPTION APPEARS  
+    document.querySelector('#opt-4c').addEventListener('click', function(){
+      scene4();
+      console.log(counter);
 
         if (recklessScore > responsibleScore){
           console.log('ending 1');
@@ -447,7 +572,6 @@
         }
     });
   }
-
 
 
 

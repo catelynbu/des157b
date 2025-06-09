@@ -7,6 +7,28 @@ body{
     overflow: hidden;
 }
 
+
+button:hover{
+    box-shadow: 4px 4px #4B59D9;
+    cursor: pointer;
+}
+
+button{
+    display: flex;
+    margin: auto;
+    background-color: #F0F0F0;
+    border: 1px solid black;
+    padding: 12px 20px;
+    border-radius: 12px;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+
+    transition: ease 0.6s;
+}
+
+
+
 h1{
     margin: 0;
 }
@@ -15,6 +37,22 @@ p{
     font-size: 1em;
     line-height: 1.3em;
     margin: 0;
+}
+
+.text-group h2{
+    margin-bottom: 0;
+}
+
+.text-group{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.paragraphs{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .color-font{
@@ -115,7 +153,6 @@ main{
 
 .option{
     padding: 20px;
-    background-color: coral;
     border-radius: 20px;
     min-width: 200px;
     text-align: center;
@@ -164,13 +201,19 @@ main{
     border-radius: 8px;
     padding: 36px;
     backdrop-filter: blur(8px);
+    z-index: 2;
+}
+
+#ending{
+    display: flex;
 }
 
 .ending-note{
-    font-size: 1.5em;
-    font-weight: 400;
-    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    /* text-align: center; */
     padding: 24px 0;
+    max-width: 600px;
 }
 
 .hide{

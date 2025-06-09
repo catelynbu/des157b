@@ -39,10 +39,8 @@
 <body>
 
 <main>
-    <section id="title" class="show">
+    <section id="title" class="hide">
         <h1>What does your <span class="color-font">AI journey</span> look like?</h1>
-
-        <!-- <p>An interactive experience exploring your future with AI tools.</p> -->
 
         <p>Explore how your current interactions and behaviors using AI tools may affect your future.</p>
 
@@ -101,7 +99,7 @@
     </section>
 
     <section id="scene3" class="hide">
-        <h1>Scenario 3</h1>
+        <h1>Scenario 3: <span class="color-font">Networking</span></h1>
 
         <section id="messages3">
            
@@ -109,56 +107,97 @@
 
         <div id="scene3-options" class="options-bar">
             <section id="opt-3a" class="textbox">
-                <p>Reckless Option</p>
+                <p>You use AI to research the employers and alumni that are attending to understand their backgrounds, values, and experiences. Then, you recall personal experiences that could be a connection point. You use AI to brainstorm other potential connection points.</p>
                 <i class="far fa-paper-plane"></i>
             </section>
 
             <section id="opt-3b" class="textbox">
-                <p>Responsible Option</p>
+                <p>You ask AI to make a list of information about the attending employers and alumni to find out their backgrounds. Based on that info, you ask the AI to create a script for you to memorize and follow later when you meet those people.</p>
                 <i class="far fa-paper-plane"></i>
             </section>
 
             <section id="opt-3c" class="textbox hide">
-                <p>Let's move on</p>
+                <p>Let's move on.</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+        </div>
+    
+    </section>
+
+    <section id="scene4" class="hide">
+        <h1>Scenario 4: <span class="color-font">Studying</span></h1>
+
+        <section id="messages4">
+           
+        </section>
+
+        <div id="scene4-options" class="options-bar">
+            <section id="opt-4a" class="textbox">
+                <p>You use AI to generate break down difficult concepts and create custom flashcards based on your class notes. You double check that the flashcards match what you've written down in your notes.</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+
+            <section id="opt-4b" class="textbox">
+                <p>You use an AI tool to generate summaries of each chapter and quiz questions without reviewing the actual class materials. You rely completely on the AI content, assuming it covers everything you'll need.</p>
+                <i class="far fa-paper-plane"></i>
+            </section>
+
+            <section id="opt-4c" class="textbox hide">
+                <p>Let's move on.</p>
                 <i class="far fa-paper-plane"></i>
             </section>
         </div>
     </section>
     
     <section id="summary1" class="hide">
-        <h1>Your AI Journey Summary</h1>
+        <h1>Your <span class="color-font">AI Journey</span> Summary</h1>
 
         <div class="text-group">
-            <h2>You seem to be a bit reckless...</h2>
-            <p id="reckless-score">placeholder</p>
-            <p>Studies show that a reliance on AI tools could lead to excessive cognitive offloading, directly affecting several cognitive functions such as <span>memory</span>, <span>attention</span>, and <span>problem-solving</span>.</p>
+            <h2>1. You seem to be a bit <span class="color-font">reckless</span>...</h2>
+
+            <div class="paragraphs">
+                <p id="reckless-score">placeholder</p>
+
+                <p><a href="https://phys.org/news/2025-01-ai-linked-eroding-critical-skills.html">Studies</a> show that a reliance on AI tools could lead to excessive cognitive offloading, directly affecting several cognitive functions such as <span>memory</span>, <span>attention</span>, and <span>problem-solving</span>.</p>
+
+                <p>Additionally, this could affect your own <span>human autonomy</span> – the ability to form original thoughts, to think for yourself. The overreliance on AI poses concerns with being easily manipulated or fed misinformation.</p>
+            </div>
+            
         </div>
 
         <div class="text-group">
-            <h2>Consider using AI as a tool, not as an easy way out.</h2>
-            <p>tip 1</p>
+            <h2>2. Consider using AI as a <span class="color-font">tool</span>, not as an easy way out.</h2>
+            <p>AI is a powerful tool that could be used to save time and complete tasks efficiently, but it should be used <span>responsibly</span> to promote productivity and new ideas. It should aid in your process by giving pointers, suggestions, room for improvement, but not replace your human input.</p>
         </div>
 
-        <p class="ending-note">Remember, your future is in your hands. Make changes now to prevent significant damage to your cognitive abilities.</p>
+        <div id="ending">
+            <p class="ending-note">Remember, your future is in your hands. Make changes now to prevent significant damage to your cognitive abilities.</p>
+
+            <button>Start over <i class="far fa-paper-plane"></i></button>
+        </div>
         
     </section>
 
     <section id="summary2" class="hide">
-        <h1>Your AI Journey Summary</h1>
+        <h1>Your <span class="color-font">AI Journey</span> Summary</h1>
 
         <div class="text-group">
-            <h2>1. You seem to be responsible.</h2>
+            <h2>1. You seem to be <span class="color-font">responsible</span>.</h2>
             <p id="responsible-score">placeholder</p>
             <p>reminder 1</p>
         </div>
 
         <div class="text-group">
-            <h2>2. AI is a helpful <span>tool</span> and you know that.</h2>
+            <h2>2. AI is a helpful <span class="color-font">tool</span> and you know that.</h2>
             <p>tip 1</p>
         </div>
 
-        <p>Remember, your future is in your hands. Make changes now to prevent irreversible damage to you cognitive abilities</p>
-        
+        <div id="ending">
+            <p class="ending-note">Remember, your future is in your hands. Make changes now to prevent significant damage to your cognitive abilities.</p>
+
+            <button>Start over <i class="far fa-paper-plane"></i></button>
+        </div>
+
     </section>
 </main>
 
