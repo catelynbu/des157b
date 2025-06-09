@@ -50,28 +50,6 @@
 
     
     //beginning messages
-
-    // setTimeout(() => {
-    //   messages1.innerHTML += '<p class="ai-message split">Hello there. lknefowneflwnlwndqlnqlnfwegwbgwnslkdnfenofineonfoisnoifnwofinoin</p>';
-
-    //   animateSplit('.split:last-child', () => {
-    //     messages1.innerHTML += '<p class="ai-message split">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit...</p>';
-
-    //     animateSplit('.split:last-child', () => {
-    //       document.querySelector('#scene1-options').classList.remove("hide");
-    //     });
-    //   });
-    // }, 200);
-
-
-
-      // messages1.innerHTML += '<p class="ai-message split">Hello there.</p>';
-
-      // messages1.innerHTML += '<p class="ai-message split">This is the situation Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fuga molestias sit perferendis dolorem maiores explicabo quas facilis sunt nisi nam, quos omnis! Eos? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, modi similique saepe aperiam, neque quia itaque aliquam beatae laudantium asperiores cum cupiditate, ad voluptate.</p>';
-      // animateSplit('.split');
-
-      // document.querySelector('#scene1-options').classList.remove("hide");
-
      setTimeout(function(){
        messages1.innerHTML += '<p class="ai-message split">You are a college student with a 10-page research paper swiftly approaching its deadline. You\'re feeling overwhelmed with other classes and extracurriculars, making it difficult to find the time to fully write out your paper. Luckily, your professor allows the usage of AI tools for ideation purposes.</p>';
 
@@ -578,7 +556,7 @@
 
   //ending: summary 1
   function summary1(){
-    document.querySelector('#scene3').className = 'hide';     //replace #scene3 with the last scene
+    document.querySelector('#scene4').className = 'hide';
     document.querySelector('#summary1').className = 'show';
 
     document.querySelector('#reckless-score').innerHTML = `<p>You chose the reckless option <span>${recklessScore}</span> out of 5 times.</p>`
@@ -586,46 +564,11 @@
 
   //ending: summary 2
   function summary2(){
-    document.querySelector('#scene3').className = 'hide';     //replace #scene3 with the last scene
+    document.querySelector('#scene4').className = 'hide';
     document.querySelector('#summary2').className = 'show';
 
-    document.querySelector('#reckless-score').innerHTML = `<p>You chose the responsible option <span>${responsibleScore}</span> out of 5 times.</p>`
+    document.querySelector('#responsible-score').innerHTML = `<p>You chose the responsible option <span>${responsibleScore}</span> out of 5 times.</p>`
   }
-
-
-  // function animateSplit(target, onComplete) {
-  //   document.fonts.ready.then(() => {
-  //     let split = SplitText.create(target, { type: "words" });
-
-  //     gsap.from(split.words, {
-  //       duration: 1.5,
-  //       y: 0,
-  //       autoAlpha: 0,
-  //       stagger: 0.05,
-  //       onComplete: onComplete
-  //     });
-  //   });
-  // }
-
-
-
-
-  //GSAP
-
-  // gsap.registerPlugin(SplitText);
-
-  // // split elements with the class "split" into words and characters
-  // let split = SplitText.create(".split", { type: "words, chars" });
-
-  // // now animate the characters in a staggered fashion
-  // gsap.from(split.chars, {
-  //   duration: 1, 
-  //   y: 100,       // animate from 100px below
-  //   autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
-  //   stagger: 0.05 // 0.05 seconds between each
-  // });
-
-
 
 
 
@@ -635,7 +578,7 @@
     if (counter--) {
       console.log('lower!');
 
-      vectorOpacity = Math.max(0, vectorOpacity - 0.2); // Decrease but don’t go below 0
+      vectorOpacity = Math.max(0, vectorOpacity - 0.2);
       document.querySelector('#vector1').style.opacity = vectorOpacity;
       document.querySelector('#vector2').style.opacity = vectorOpacity;
 
@@ -684,54 +627,5 @@ Draggable.create("#vector1", {
 function setSpinProgress() {
   spin.progress(gsap.utils.wrap(0, 360, this.rotation) / 360);
 }
-
-// Draggable.create("#vector2", {
-//   type: "rotation",
-//   inertia: true
-// });
-
-// Draggable.create("#vector3a", {
-//   type: "rotation",
-//   inertia: true
-// });
-
-// Draggable.create("#vector3b", {
-//   type: "rotation",
-//   inertia: true
-// });
-
-
-// const messages = [
-//     "Start your journey now",
-//     "What path will you take?",
-//     "Let's get going",
-//     "I wonder what's next"
-//   ];
-
-//   const textBox = document.querySelector("#cycle");
-//   let index = 0;
-
-//   function typeMessage(message, callback) {
-//     textBox.textContent = ""; // Clear previous text
-//     const chars = message.split("");
-//     chars.forEach((char, i) => {
-//       gsap.delayedCall(i * 0.05, () => {
-//         textBox.textContent += char;
-//         if (i === chars.length - 1 && callback) {
-//           gsap.delayedCall(1.5, callback); // Wait a bit before next message
-//         }
-//       });
-//     });
-//   }
-
-//   function cycleMessages() {
-//     typeMessage(messages[index], () => {
-//       index = (index + 1) % messages.length;
-//       cycleMessages();
-//     });
-//   }
-
-//   // Start the cycle
-//   cycleMessages();
 
 })();
