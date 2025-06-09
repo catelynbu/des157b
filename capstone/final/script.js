@@ -20,7 +20,7 @@
 
 
   //running the title screen
-  summary2();
+  title();
 
 
   //title screen: hides option 2, event handler for option 1 -> starts scene 1, removes 'hide' from option2
@@ -418,9 +418,6 @@
 
 
 
-
-
-
   //scene 4
   function scene4(){
     document.querySelector('#scene3').className = 'hide';
@@ -559,7 +556,7 @@
     document.querySelector('#scene4').className = 'hide';
     document.querySelector('#summary1').className = 'show';
 
-    document.querySelector('#reckless-score').innerHTML = `<p>You chose the reckless option <span>${recklessScore}</span> out of 5 times.</p>`
+    document.querySelector('#reckless-score').innerHTML = `<p>You chose the reckless option <span>${recklessScore}</span> out of 4 times.</p>`
   }
 
   //ending: summary 2
@@ -567,14 +564,24 @@
     document.querySelector('#scene4').className = 'hide';
     document.querySelector('#summary2').className = 'show';
 
-    document.querySelector('#responsible-score').innerHTML = `<p>You chose the responsible option <span>${responsibleScore}</span> out of 5 times.</p>`
+    document.querySelector('#responsible-score').innerHTML = `<p>You chose the responsible option <span>${responsibleScore}</span> out of 4 times.</p>`
   }
+
+
+  //restart button
+  const againbtn = document.querySelectorAll('.again');
+
+  for (let i=0; i<againbtn.length; i++){
+    againbtn[i].addEventListener('click', function(){
+      location.reload();
+    })
+  }
+    
 
 
 
   //function to trigger the opacity changes
   function opacity(){
-
     if (counter--) {
       console.log('lower!');
 
@@ -595,11 +602,9 @@
 
 
 
-//gsap.registerPlugin(Draggable, InertiaPlugin);
 gsap.registerPlugin(InertiaPlugin) 
 
-
-  const spin = gsap.timeline({repeat:-1})
+const spin = gsap.timeline({repeat:-1})
   .set("#vector1", { opacity: 1 })
   .fromTo("#vector1", {
     transformOrigin: "50%",

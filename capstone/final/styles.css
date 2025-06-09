@@ -204,7 +204,7 @@ main{
     z-index: 2;
 }
 
-#ending{
+.ending{
     display: flex;
 }
 
