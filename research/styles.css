@@ -54,6 +54,15 @@ li a:hover{
     padding-left: 24px;
 }
 
+.p-link{
+    font-weight: 600;
+}
+
+.p-link:hover{
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: 800;
+}
 
 button{
     color: white;
@@ -86,6 +95,7 @@ section{
     display: flex;
     flex-direction: column;
     gap: 18px;
+    max-width: 800px;
 }
 
 .together{
@@ -129,11 +139,22 @@ img{
     background-color: white;
 }
 
+.fit{
+   box-sizing: border-box;
+   width: 50%;
+}
+
 .imgtext{
     max-width: 800px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.imgflex{
+    display: flex;
+    gap: 24px;
+    max-width: 800px;
 }
 
 #bottombar{
